@@ -1,0 +1,14 @@
+---
+title: Celeste
+layout: layouts/base.njk
+permalink: "examples.html"
+---
+
+{%- for item in examples.list | reverse %}
+  <p>{{ item. title }}</p>
+  <div>
+    {% highlight "js" %}
+      {{ item.content | safe }}
+    {% endhighlight %}
+  </div>
+{%- endfor %}
