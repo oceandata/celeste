@@ -8,8 +8,8 @@
     "clean": "rm -rf dist",
     "eleventy:default": "npx eleventy",
     "eleventy:watch": "npx eleventy --watch",
-    "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
-    "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
+    "styles:prod": "node-sass src/styles/ --output dist/assets/styles/ && postcss ./dist/assets/styles/*.css --replace",
+    "styles:dev": "node-sass src/styles/ --output dist/assets/styles/ --source-map true --source-map-contents true && postcss ./dist/assets/styles/*.css --replace",
     "scripts:prod": "webpack --mode=production",
     "scripts:dev": "webpack --mode=development",
     "serve": "light-server -c .lightserverrc",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "autoprefixer": "^9.6.5",
