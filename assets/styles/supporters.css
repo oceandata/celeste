@@ -1,0 +1,1 @@
+.supporters{display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr;width:100vw;height:100vh}.supporters__title{margin:0;padding:24px;font-size:48px;text-align:center}.supporters__image{align-self:center;justify-self:center}
