@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Celeste</title>
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/index.css">
+  </head>
+
+  <body>
+    <header class="page-header">
+      <a href="/" class="page-header__logo">Project Céleste</a>
+    </header>
+    <main class="page-content">
+      
+<article class="example">
+  <header class="example__header">
+    <h2 class="example__title">
+      Dissolved oxygen concentration using Copernicus Marine Services WMS and Leaflet
+    </h2>
+    <h3 class="example__product">
+      Baltic Sea Biogeochemistry Analysis and Forecast
+    </h3>
+  </header>
+
+  <section class="example__snippets">
+    <div class="example__snippet">
+      <pre class="language-html"><code class="language-html"><span class="highlight-line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>map<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></span></code></pre>
+    </div>
+    <div class="example__snippet">
+      <pre class="language-css"><code class="language-css"><span class="highlight-line"><span class="token selector">#map</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token property">height</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span></span><br><span class="highlight-line">  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span></code></pre>
+    </div>
+    <div class="example__snippet">
+      <pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ol<span class="token punctuation">.</span>Map</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span><br><span class="highlight-line">  target<span class="token punctuation">:</span> <span class="token string">'map'</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  layers<span class="token punctuation">:</span> <span class="token punctuation">[</span></span><br><span class="highlight-line">    <span class="token keyword">new</span> <span class="token class-name">ol<span class="token punctuation">.</span>layer<span class="token punctuation">.</span>Tile</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span><br><span class="highlight-line">      source<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">ol<span class="token punctuation">.</span>source<span class="token punctuation">.</span>OSM</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><br><span class="highlight-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span></span><br><span class="highlight-line">  <span class="token punctuation">]</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  view<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">ol<span class="token punctuation">.</span>View</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span><br><span class="highlight-line">    center<span class="token punctuation">:</span> ol<span class="token punctuation">.</span>proj<span class="token punctuation">.</span><span class="token function">fromLonLat</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">24.700530</span><span class="token punctuation">,</span> <span class="token number">59.423885</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span><br><span class="highlight-line">    zoom<span class="token punctuation">:</span> <span class="token number">4</span></span><br><span class="highlight-line">  <span class="token punctuation">}</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token keyword">const</span> wmsSource <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ol<span class="token punctuation">.</span>source<span class="token punctuation">.</span>TileWMS</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span><br><span class="highlight-line">  url<span class="token punctuation">:</span> <span class="token string">'http://nrt.cmems-du.eu/thredds/wms/dataset-bal-analysis-forecast-bio-dailymeans'</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  params<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'LAYERS'</span><span class="token punctuation">:</span> <span class="token string">'o2'</span><span class="token punctuation">,</span> <span class="token string">'TIME'</span><span class="token punctuation">:</span> <span class="token string">'2019-09-23T12:30:00.000Z'</span><span class="token punctuation">}</span></span><br><span class="highlight-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token keyword">const</span> wmsLayer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ol<span class="token punctuation">.</span>layer<span class="token punctuation">.</span>Tile</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span><br><span class="highlight-line">  source<span class="token punctuation">:</span> wmsSource</span><br><span class="highlight-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line"></span><br><span class="highlight-line">map<span class="token punctuation">.</span><span class="token function">addLayer</span><span class="token punctuation">(</span>wmsLayer<span class="token punctuation">)</span><span class="token punctuation">;</span></span></code></pre>
+    </div>
+  </section>
+
+  <section class="example__result">
+    <iframe width='100%' height='300' src='//jsfiddle.net/bolkhovsky/pcmy6270/14/embedded/result/' allowfullscreen='allowfullscreen' allowpaymentrequest frameborder='0'></iframe>
+  </section>
+</article>
+
+    </main>
+    <script src="/assets/scripts/index.js"></script>
+  </body>
+</html>
