@@ -1,12 +1,17 @@
 @import 'prism-ghcolors';
 @import 'page-header';
 @import 'page-content';
+@import 'landing';
 @import 'example';
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
-  color: #232323;
+  color: #434243;
 }
 
 code[class*="language-"],
