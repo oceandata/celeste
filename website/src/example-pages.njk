@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/inner.njk
 title: Celeste
 
 pagination:
@@ -9,17 +9,28 @@ pagination:
 permalink: /examples/{{example.id}}/
 ---
 
-<p>{{ example.title }}</p>
-<div>
-  {% highlight "js" %}
-    {{ example.jsContent | safe }}
-  {% endhighlight %}
+<article class="example">
+  <h2 class="example__header">{{ example.title }}</h2>
 
-  {% highlight "css" %}
-    {{ example.cssContent | safe }}
-  {% endhighlight %}
+  <section class="example__snippets">
+    <div class="example__snippet">
+      {% highlight "html" %}
+        {{ example.htmlContent | safe }}
+      {% endhighlight %}
+    </div>
+    <div class="example__snippet">
+      {% highlight "css" %}
+        {{ example.cssContent | safe }}
+      {% endhighlight %}
+    </div>
+    <div class="example__snippet">
+      {% highlight "js" %}
+        {{ example.jsContent | safe }}
+      {% endhighlight %}
+    </div>
+  </section>
 
-  {% highlight "html" %}
-    {{ example.htmlContent | safe }}
-  {% endhighlight %}
-</div>
+  <section class="example__result">
+    {{ example.embed | safe }}
+  </section>
+</article>

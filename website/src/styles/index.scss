@@ -1,11 +1,16 @@
 @import 'prism-ghcolors';
+@import 'page-header';
+@import 'page-content';
+@import 'example';
 
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
+  color: #232323;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
   font-family: 'Fira Code', monospace !important;
+  border: none !important;
 }
