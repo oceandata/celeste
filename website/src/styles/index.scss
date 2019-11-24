@@ -25,6 +25,12 @@ pre[class*="language-"] {
   border: none !important;
 }
 
+pre[class*="language-"] {
+  margin: 0 !important;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+}
+
 a {
   color: #05b6f3;
   text-decoration: none;
