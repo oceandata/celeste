@@ -1,5 +1,6 @@
 // We’ll add a tile layer to add to our map, in this case it’s a OSM tile layer.
 // Creating a tile layer usually involves setting the URL template for the tile images
+
 const osmUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
 const osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const osm = L.tileLayer(osmUrl, {
