@@ -11,7 +11,25 @@ layout: layouts/base.njk
   </h2>
 </main>
 
-<article class="supporters">
-  <h3 class="supporters__title">Supporters</h3>
+<article class="section supporters">
+  <h3 class="section__title supporters__title">Supporters</h3>
   <img src="/assets/images/supporters.png" alt="Supporters" class="supporters__image">
 </article>
+
+<section class="section">
+  <h3 class="section__title">Take a look!</h3>
+  <div class="section__content">
+    <ul class="examples-list">
+      {%- for example in examples.list -%}
+        <li class="examples-list__item">
+          <a href="/examples/{{ example.id }}/index.html" class="examples-list__item-preview">
+            <figure class="examples-list__item-preview-figure">
+              <img src="" alt="">
+            </figure>
+          </a>
+          <a href="/examples/{{ example.id }}/index.html" class="examples-list__item-title">{{ example.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>

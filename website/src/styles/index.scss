@@ -4,6 +4,8 @@
 @import 'landing';
 @import 'example';
 @import 'supporters';
+@import 'section';
+@import 'examples-list';
 
 * {
   box-sizing: border-box;
@@ -11,6 +13,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.35;
   background-color: #ffffff;
   color: #434243;
 }
@@ -20,3 +24,15 @@ pre[class*="language-"] {
   font-family: 'Fira Code', monospace !important;
   border: none !important;
 }
+
+a {
+  color: #05b6f3;
+}
+
+
+// Color	Hex	RGB
+// #05fcfe	(5,252,254)
+// #01d6fe	(1,214,254)
+// #03c3f5	(3,195,245)
+// #05b6f3	(5,182,243)
+// #0780fe	(7,128,254)
