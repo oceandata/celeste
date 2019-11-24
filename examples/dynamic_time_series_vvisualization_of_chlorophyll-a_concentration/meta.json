@@ -1,5 +1,5 @@
 {
   "title": "Dynamic time-series visualization of chlorophyll-a concentration using Copernicus Marine Services WMS and OpenLayers",
   "product": "Baltic Sea Biogeochemistry Analysis and Forecast",
-  "embed": "<iframe width='100%' height='300' src='//jsfiddle.net/bolkhovsky/pcmy6270/38/embedded/result/' allowfullscreen='allowfullscreen' allowpaymentrequest frameborder='0'></iframe>"
+  "embed": "<iframe width='100%' height='300' src='//jsfiddle.net/bolkhovsky/pcmy6270/47/embedded/result/' allowfullscreen='allowfullscreen' allowpaymentrequest frameborder='0'></iframe>"
 }
