@@ -1,17 +1,26 @@
 <!doctype html>
+
 <html lang="en" class="no-js">
-<head>
-  <meta charset="utf-8">
-  <script>
-    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ renderData.description or description or metadata.description }}">
-  <title>{{ renderData.title or title or metadata.title }}</title>
-  <link rel="stylesheet" href="/assets/styles/index.css">
-</head>
-<body>
-  {{ content | safe }}
-  <script src="/assets/scripts/index.js"></script>
-</body>
+
+  <head>
+    <meta charset="utf-8">
+    <title>{{ renderData.title or title or metadata.title }}</title>
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/index.css">
+  </head>
+
+  <body>
+    {{ content | safe }}
+    <script src="/assets/scripts/index.js"></script>
+  </body>
+
 </html>

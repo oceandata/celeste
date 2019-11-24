@@ -5,10 +5,10 @@ permalink: "examples.html"
 ---
 
 {%- for item in examples.list | reverse %}
-  <p>{{ item. title }}</p>
-  <div>
+  <p>{{ item.title }}</p>
+  {# <div>
     {% highlight "js" %}
       {{ item.content | safe }}
     {% endhighlight %}
-  </div>
+  </div> #}
 {%- endfor %}
