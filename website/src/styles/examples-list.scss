@@ -1,6 +1,6 @@
 .examples-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 25%));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 24px;
   row-gap: 24px;
   margin: 0;

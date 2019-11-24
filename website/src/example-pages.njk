@@ -10,7 +10,14 @@ permalink: /examples/{{example.id}}/
 ---
 
 <article class="example">
-  <h2 class="example__header">{{ example.title }}</h2>
+  <header class="example__header">
+    <h2 class="example__title">
+      {{ example.title }}
+    </h2>
+    <h3 class="example__product">
+      {{ example.product}}
+    </h3>
+  </header>
 
   <section class="example__snippets">
     <div class="example__snippet">

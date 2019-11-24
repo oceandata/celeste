@@ -2,5 +2,10 @@
   display: block;
   position: sticky;
   height: 60px;
-  border-bottom: 1px solid #cccccc;
+  color: #333333;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 60px;
+  padding: 0 40px;
+  box-shadow: 0 2px 4px rgba(57, 63, 72, 0.3);
 }

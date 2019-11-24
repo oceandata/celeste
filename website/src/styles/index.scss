@@ -27,6 +27,11 @@ pre[class*="language-"] {
 
 a {
   color: #05b6f3;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 
