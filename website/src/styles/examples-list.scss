@@ -23,7 +23,9 @@
 }
 
 .examples-list__item-preview-figure {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -37,6 +39,8 @@
   & > img {
     object-fit: contain;
     object-position: center;
+    max-width: 80px;
+    opacity: 0.5;
   }
 }
 
