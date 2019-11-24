@@ -1,6 +1,11 @@
-@import '_reset.scss';
 @import 'prism-ghcolors';
 
 body {
+  font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: 'Fira Code', monospace !important;
 }

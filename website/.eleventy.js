@@ -2,6 +2,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function(config) {
   config.addPassthroughCopy('src/assets/images');
+  config.addPassthroughCopy({ '../../examples': 'assets/examples' });
 
   config.addPlugin(syntaxHighlight);
 
@@ -10,5 +11,5 @@ module.exports = function(config) {
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md', 'css', 'html', 'yml'],
     htmlTemplateEngine: 'njk'
-  }
-}
+  };
+};

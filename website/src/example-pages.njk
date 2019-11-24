@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Celeste
+
+pagination:
+  data: examples.list
+  size: 1
+  alias: example
+permalink: /examples/{{example.id}}/
+---
+
+<p>{{ example.title }}</p>
+<div>
+  {% highlight "js" %}
+    {{ example.jsContent | safe }}
+  {% endhighlight %}
+
+  {% highlight "css" %}
+    {{ example.cssContent | safe }}
+  {% endhighlight %}
+
+  {% highlight "html" %}
+    {{ example.htmlContent | safe }}
+  {% endhighlight %}
+</div>

@@ -1,24 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 
-const list = [
-  {
-    title: 'Title 1',
-    id: 'test-1',
-    dir: '1',
-    tags: ['TAG_1', 'TAG_2'],
-  },
-  {
-    title: 'Title 2',
-    id: 'test-2',
-    dir: '2',
-    tags: ['TAG_3', 'TAG_4'],
-  }
-]
+const examplesDir = '../../../examples';
 
-const examples = list.map((item) => ({
-  ...item,
-  content: fs.readFileSync(`${path.join(__dirname, '../examples', item.dir)}/index.js`, 'utf8'),
+const dirList = fs.readdirSync(path.join(__dirname, examplesDir));
+
+const examples = dirList.map((item) => ({
+  id: item,
+  title: require(path.join(__dirname, examplesDir, item, 'meta.json')).title,
+  jsContent: fs.readFileSync(path.join(__dirname, examplesDir, item, 'script.js'), 'utf8'),
+  cssContent: fs.readFileSync(path.join(__dirname, examplesDir, item, 'styles.css'), 'utf8'),
+  htmlContent: fs.readFileSync(path.join(__dirname, examplesDir, item, 'layout.html'), 'utf8'),
 }));
 
 module.exports = {
